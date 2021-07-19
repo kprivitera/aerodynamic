@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import Article from '../interfaces/article';
+import ImageCarousel from '../components/carousel';
 
 interface HomeProps {
     articles: Article[];
@@ -14,7 +15,7 @@ const HomePage: React.FC<HomeProps> = ({ articles }: HomeProps) => {
         <title>Homepage title</title>
         <meta name="description" content="This is the page description" />
       </Head>
-      <div>This is a homepage</div>
+      <ImageCarousel />
     </>
   );
 };

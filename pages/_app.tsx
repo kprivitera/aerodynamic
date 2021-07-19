@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import '../styles/global.css';
+import 'bootstrap/dist/css/bootstrap.css'
 
 import Layout from '../components/layout'
 
