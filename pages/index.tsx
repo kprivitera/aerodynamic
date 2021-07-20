@@ -16,6 +16,14 @@ const HomePage: React.FC<HomeProps> = ({ articles }: HomeProps) => {
         <meta name="description" content="This is the page description" />
       </Head>
       <ImageCarousel />
+      <p>Some text</p>
+      <p>Some text</p>
+      <p>Some text</p>
+      <p>Some text</p>
+      <p>Some text</p>
+      <p>Some text</p>
+      <p>Some text</p>
+      <p>Some text</p>
     </>
   );
 };
