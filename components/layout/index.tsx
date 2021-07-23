@@ -5,9 +5,9 @@ import styles from './styles.module.css';
 const Layout: React.FC = ({ children }) => {
   return (
     <>
-      <Header>header</Header>
+      <Header />
       <main className={styles.main}>{children}</main>
-      <Footer>footer</Footer>
+      <Footer />
     </>
   );
 };

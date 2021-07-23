@@ -1,0 +1,22 @@
+.footerWrapper {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.leftPanel {
+  flex-basis: 40%;
+}
+
+.contactDetails {
+  padding: 0;
+}
+
+.contactDetails li {
+  list-style-type: none;
+}
+
+.rightPanel {
+  flex-basis: 60%;
+}
