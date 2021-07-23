@@ -1,9 +1,15 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
 
 import Service from '../components/service';
 import styles from '../styles/home.module.css';
 
 const HomePage = () => {
+  useEffect(() => {
+    fetch('/api/contact', {
+      method: 'post',
+    });
+  }, [])
   return (
     <>
       <Head>

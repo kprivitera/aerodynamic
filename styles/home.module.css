@@ -1,17 +1,23 @@
 .homeContainer {
   background-color: #141316;
   display: flex;
-  margin: -150px auto 0 auto;
   max-width: 1300px;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
+  flex-direction: column;
 }
 
 .hero {
-  height: 600px;
+  height: 380px;
   max-width: 1300px;
   margin: 0 auto;
   padding-top: 100px;
+
+  height: 0;
+  padding-bottom: 40%;
+  width: 100%;
+  /* background-size: cover; */
 }
 
 .leftPanel {
@@ -19,6 +25,17 @@
   padding: 24px;
 }
 
-.servicesContainer {
-  margin-top: -100px;
+@media only screen and (min-width: 700px) {
+  .homeContainer {
+    flex-direction: row;
+    margin: -150px auto 0 auto;
+  }
+
+  .hero {
+    /* height: 600px; */
+  }
+
+  .servicesContainer {
+    margin-top: -100px;
+  }
 }
