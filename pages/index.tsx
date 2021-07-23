@@ -1,48 +1,34 @@
 import Head from 'next/head';
 
-import Article from '../interfaces/article';
-import ImageCarousel from '../components/carousel';
+import Service from '../components/service';
+import styles from '../styles/home.module.css';
 
-interface HomeProps {
-    articles: Article[];
-}
-
-const HomePage: React.FC<HomeProps> = ({ articles }: HomeProps) => {
-  console.log('articles', articles)
+const HomePage = () => {
   return (
     <>
       <Head>
         <title>Homepage title</title>
         <meta name="description" content="This is the page description" />
       </Head>
-      <ImageCarousel />
-      <p>Some text</p>
-      <p>Some text</p>
-      <p>Some text</p>
-      <p>Some text</p>
-      <p>Some text</p>
-      <p>Some text</p>
-      <p>Some text</p>
-      <p>Some text</p>
+      <div className={styles.hero}>
+        <h1>Aerodynamic systems</h1>
+        <h3>Slogan</h3>
+      </div>
+      <div className={styles.homeContainer}>
+        <div className={styles.leftPanel}>
+          <h2>ABOUT AERODYNAMIC</h2>
+          <p>Aerodynamic is an avionics equipment service provider focused on providing solutions for commercial and business jet operators, MRO’s and military customers. With over 30 year’s experience in the aviation industry Aerodynamic is the leading avionics service provider for major airlines and repair facilities globally.</p>
+        </div>
+        <div className={styles.servicesContainer}>
+          <Service />
+          <Service />
+          <Service />
+          <Service />
+        </div>
+      </div>
+ 
     </>
   );
 };
 
 export default HomePage;
-
-export const getStaticProps = async () => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
-  const articles = await res.json();
-  return {
-    props: { 
-      articles
-     }
-  };
-};
-
-
-// data fetching: we get data and pass it into component as props
-// -------------------------------------------------- 
-// getStaticProps: allows us to fetch at buils time
-// getServerSideProps: fetch data on every request which is slower
-// getStaticPaths: dynamically get paths depending on the data were fetching

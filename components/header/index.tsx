@@ -1,7 +1,7 @@
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import Image from 'next/image'
+import Image from 'next/image';
 
 import styles from './styles.module.css';
 
@@ -20,11 +20,9 @@ const Header = () => {
   }, []);
 
   return (
-    // <Navbar className={classNames({[styles.hidden]: show }, styles.navbar)} expand="lg" fixed="top">
-    <Navbar expand="lg" fixed="top">
+    <Navbar className={classNames({[styles.hidden]: show }, styles.navbar)} expand="lg" fixed="top">
       <Container>
-        {/* <Navbar.Brand href="#home"><Image width="203" height="61" src="/logo.png" alt="logo" /></Navbar.Brand> */}
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand className={styles.logoWrapper} href="#home"><Image width="203" height="61" src="/logo.png" alt="logo" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

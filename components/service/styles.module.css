@@ -1,0 +1,35 @@
+.service {
+  background-color: #1b1c1e;
+  border-radius: 10px;
+  max-width: 831px;
+  padding: 24px;
+  margin-bottom: 12px;
+}
+
+.typeWrapper {
+  align-items: center;
+  color: #ff6700;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.typeWrapper h1 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.iconWrapper {
+  line-height: 14px;
+  margin-right: 16px;
+}
+
+.icon {
+  fill: #8a8a8a;
+  margin-right: 16px;
+}
+
+.body {
+  color: #8a8a8a;
+}

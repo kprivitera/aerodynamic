@@ -1,7 +1,16 @@
-.hidden {
-  display: none;
-}
-
 .navbar {
   background-color: #141416;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.navbar.hidden {
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+  visibility: hidden;
+}
+
+.logoWrapper {
+  padding: 0;
 }
