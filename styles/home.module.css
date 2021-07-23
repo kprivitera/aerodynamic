@@ -1,23 +1,27 @@
+.pageWrapper {
+  background-image: url('../public/background.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .homeContainer {
   background-color: #141316;
   display: flex;
-  max-width: 1300px;
+  flex-direction: column;
   margin: 0 auto;
+  max-width: 1300px;
   position: relative;
   z-index: 2;
-  flex-direction: column;
 }
 
 .hero {
-  height: 380px;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding-top: 100px;
-
   height: 0;
+  height: 380px;
+  margin: 0 auto;
+  max-width: 1300px;
   padding-bottom: 40%;
+  padding-top: 100px;
   width: 100%;
-  /* background-size: cover; */
 }
 
 .leftPanel {
@@ -29,10 +33,6 @@
   .homeContainer {
     flex-direction: row;
     margin: -150px auto 0 auto;
-  }
-
-  .hero {
-    /* height: 600px; */
   }
 
   .servicesContainer {

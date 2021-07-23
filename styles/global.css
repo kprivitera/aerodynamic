@@ -18,9 +18,6 @@ a {
 
 body {
   background-color: #141316 !important;
-  background-image: url('../public/background.png');
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 h1,
