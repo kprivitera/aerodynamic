@@ -1,25 +1,118 @@
-.navbar {
-  background-color: #141416;
-  color: white;
-  visibility: visible;
+.navbarItems {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 85px;
+  justify-content: center;
   opacity: 1;
+  position: fixed;
+  top: 0;
   transition: visibility 0s linear 0s, opacity 300ms;
+  visibility: visible;
+  width: 100%;
 }
 
-.navbar.hidden {
+.navbarItems.hidden {
   opacity: 0;
   transition: visibility 0s linear 300ms, opacity 300ms;
   visibility: hidden;
 }
 
-.navLinks a {
-  color: #fff !important;
+.navbarLogo {
+  color: #fff;
+  cursor: pointer;
+  justify-self: start;
+  margin-bottom: 0;
+  margin-left: 20px;
 }
 
-.logoWrapper {
-  padding: 0;
+.navMenu {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, auto);
+  justify-content: end;
+  list-style: none;
+  margin-bottom: 0;
+  margin-right: 2rem;
+  text-align: center;
+  width: 70vw;
 }
 
-.logoWrapper > div {
-  display: block !important;
+.navLinks {
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.menuIcon {
+  color: #fff;
+  display: none;
+}
+
+.navLinksMobile {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .navbarItems {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    left: -100%;
+    opacity: 1;
+    position: absolute;
+    top: 80px;
+    transition: all 0.5s ease;
+    width: 100%;
+  }
+
+  .menuActive {
+    background: #000;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .navLinks {
+    display: table;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbarLogo {
+    display: flex;
+    align-items: center;
+  }
+
+  .menuIcon {
+    cursor: pointer;
+    display: block;
+    font-size: 1.8rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-100%, 60%);
+  }
+
+  .navLinksMobile {
+    border-raduis: 4px;
+    display: block;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    text-align: center;
+    width: 80%;
+  }
+
+  .contactButton {
+    display: none;
+  }
 }
