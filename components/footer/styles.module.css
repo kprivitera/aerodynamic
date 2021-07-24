@@ -1,9 +1,10 @@
 .footerWrapper {
   background-color: #141316;
   display: flex;
+  flex-wrap: wrap;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 2rem 1rem 1rem;
 }
 
 .leftPanel {
@@ -11,13 +12,58 @@
 }
 
 .contactDetails {
+  margin-top: 1rem;
   padding: 0;
 }
 
 .contactDetails li {
   list-style-type: none;
+  padding: 2px 0;
 }
 
 .rightPanel {
   flex-basis: 60%;
+}
+
+.subscriptionForm label {
+  color: white;
+  display: block;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: .7rem;
+}
+.subscriptionForm input[type="text"] {
+  background: #141316;
+  border: 2px solid #969696;
+  border-radius: 5px;
+  margin-right: .7rem;
+  min-width: 350px;
+  padding: .5rem 1rem;
+}
+
+.socials {
+  align-items: center;
+  display: flex;
+  padding-top: 3rem;
+}
+
+.socials p {
+  margin: 0 .5rem 0 0;
+}
+
+.socials svg {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 .4rem;
+}
+
+.bottomPanel {
+  border-top: solid 1px #505050;
+  padding-top: 1.5em;
+  margin: 1.5rem 0 .5rem 0;
+  width: 100%;
+}
+
+.bottomPanel p {
+  margin-bottom: 0;
 }

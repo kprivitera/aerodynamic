@@ -1,5 +1,6 @@
 .pageWrapper {
   background-image: url('../public/background.png');
+  /* background-image: url(https://www.dviation.com/sites/default/files/styles/banner/public/page-banner/about-us.jpg?itok=YIsFQ3nT); */
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -37,7 +38,7 @@
 .hero h3 {
   color: white;
   font-size: 22px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .leftPanel {
