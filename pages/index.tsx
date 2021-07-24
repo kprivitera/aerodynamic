@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
 
 import Service from '../components/service';
 import styles from '../styles/home.module.css';
@@ -23,8 +24,10 @@ const HomePage = () => {
         </div>
         <div className={styles.homeContainer}>
           <div className={styles.leftPanel}>
-            <h2>ABOUT AERODYNAMIC</h2>
-            <p>Aerodynamic is an avionics equipment service provider focused on providing solutions for commercial and business jet operators, MRO’s and military customers. With over 30 year’s experience in the aviation industry Aerodynamic is the leading avionics service provider for major airlines and repair facilities globally.</p>
+            <Fade duration={2000}>
+              <h2>ABOUT AERODYNAMIC</h2>
+              <p>Aerodynamic is an avionics equipment service provider focused on providing solutions for commercial and business jet operators, MRO’s and military customers. With over 30 year’s experience in the aviation industry Aerodynamic is the leading avionics service provider for major airlines and repair facilities globally.</p>
+            </Fade>
           </div>
           <div className={styles.servicesContainer}>
             <Service />

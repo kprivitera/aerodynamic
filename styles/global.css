@@ -1,5 +1,5 @@
 @import url(//db.onlinewebfonts.com/c/9c2ccace53b738b46f1f06b421e54849?family=HelveticaNeueLTW20-Light);
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
 
 html,
 body {
@@ -33,7 +33,6 @@ h6 {
 p,
 li {
   color: #969696;
-
 }
 
 p {

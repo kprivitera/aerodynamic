@@ -1,7 +1,9 @@
 .service {
   background-color: #1b1c1e;
   border-radius: 10px;
+  margin-bottom: 12px;
   max-width: 831px;
+  overflow: hidden;
   padding: 24px;
 }
 

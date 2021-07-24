@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import got from 'got';
+import { startCase } from 'lodash/fp';
 
 import styles from '../styles/contact.module.css';
+
+const formFields = [
+  { type: 'text', name: "name" },
+  { type: 'email', name: "email" },
+  { type: 'tel', name: "phone" },
+];
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -21,32 +28,25 @@ const Contact = () => {
       <div className={styles.pageContainer}>
         <h1>Contact support</h1>
         <form onSubmit={handleSubmit} className={styles.form}>
-          <label htmlFor="name">Name:</label>
-          <input
-            id="name"
-            type="text"
-            onChange={(event: React.FormEvent<HTMLInputElement>) => setName(event.currentTarget.value)}
-            placeholder="Name"
-          />
-          <label htmlFor="email">Email:</label>
-          <input
-            id="email"
-            type="email"
-            onChange={e => setEmail(e.target.value)}
-            placeholder="Email"
-          />
-          <label htmlFor="email">Phone:</label>
-          <input
-            id="email"
-            type="email"
-            onChange={e => setEmail(e.target.value)}
-            placeholder="Email"
-          />
+          {formFields.map(({ type, name }) => {
+            return (
+              <>
+                <label htmlFor={name}>{startCase(name)}:</label>
+                <input 
+                  id={name} 
+                  type={type} 
+                  placeholder={startCase(name)} 
+                  onChange={(event: React.FormEvent<HTMLInputElement>) => setName(event.currentTarget.value)} 
+                />
+              </>
+            );
+          })}
+
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
             rows={4}
-            onChange={e => setMessage(e.target.value)}
+            onChange={(event: React.FormEvent<HTMLInputElement>) => setMessage(event.currentTarget.value)}
             placeholder="Message"
           />
           <button type="submit">Send</button>
