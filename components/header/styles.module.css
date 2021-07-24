@@ -1,5 +1,6 @@
 .navbar {
   background-color: #141416;
+  color: white;
   visibility: visible;
   opacity: 1;
   transition: visibility 0s linear 0s, opacity 300ms;
@@ -11,6 +12,14 @@
   visibility: hidden;
 }
 
+.navLinks a {
+  color: #fff !important;
+}
+
 .logoWrapper {
   padding: 0;
+}
+
+.logoWrapper > div {
+  display: block !important;
 }
