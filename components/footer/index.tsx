@@ -16,8 +16,8 @@ const Footer = () => (
       <Image width="203" height="61" src="/logo.png" alt="logo" />
     </div>
     <div className={styles.rightPanel}>
-      <p>Subscribe to our newsletter</p>
-      <Clickable type="largeBordered" to="www.google.com">click me</Clickable>
+      <p>Subscribe to Our Newsletter</p>
+      <Clickable type="largeBordered" to="www.google.com">Click Me</Clickable>
     </div>
   </footer>
 );

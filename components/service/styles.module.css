@@ -3,7 +3,10 @@
   border-radius: 10px;
   max-width: 831px;
   padding: 24px;
-  margin-bottom: 12px;
+}
+
+.service:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
 .typeWrapper {
@@ -14,10 +17,10 @@
 }
 
 .typeWrapper h1 {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 3px;
+  font-size: 23px;
+  letter-spacing: 2px;
   margin: 0;
+  font-weight: 600;
 }
 
 .iconWrapper {

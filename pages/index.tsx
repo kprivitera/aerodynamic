@@ -18,7 +18,7 @@ const HomePage = () => {
       </Head>
       <div className={styles.pageWrapper}>
         <div className={styles.hero}>
-          <h1>Aerodynamic systems</h1>
+          <h1>AeroDynamic Systems</h1>
           <h3>Slogan</h3>
         </div>
         <div className={styles.homeContainer}>
