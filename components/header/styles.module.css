@@ -44,6 +44,10 @@
   text-decoration: none;
 }
 
+.listItem {
+  display: none;
+}
+
 .menuIcon {
   color: #fff;
   display: none;
@@ -114,5 +118,9 @@
 
   .contactButton {
     display: none;
+  }
+
+  .listItem {
+    display: block;
   }
 }

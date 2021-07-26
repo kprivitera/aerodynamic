@@ -46,7 +46,7 @@ const Contact = () => {
           <textarea
             id="message"
             rows={4}
-            onChange={(event: React.FormEvent<HTMLInputElement>) => setMessage(event.currentTarget.value)}
+            onChange={( event: React.ChangeEvent<HTMLTextAreaElement>): void => setMessage(event.target.value)}
             placeholder="Message"
           />
           <button type="submit">Send</button>

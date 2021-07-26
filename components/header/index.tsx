@@ -40,7 +40,7 @@ const Header = () => {
         <FontAwesomeIcon icon={menuIcon} />
       </div>
       <ul className={classNames(styles.navMenu, {[styles.menuActive]: hamburgerClicked },)}>
-        <li><a className={styles.navLinks} href="/contact"/>Contact</li>
+        <li className={styles.listItem}><a className={styles.navLinks} href="/contact"/>Contact</li>
       </ul>
       <Clickable className={styles.contactButton} to="/contact" type="largeBordered">Contact</Clickable>
     </nav>
