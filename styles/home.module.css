@@ -1,8 +1,8 @@
 .pageWrapper {
-  background-image: url('../public/background.png');
-  /* background-image: url(https://www.dviation.com/sites/default/files/styles/banner/public/page-banner/about-us.jpg?itok=YIsFQ3nT); */
+  /* background-image: url('../public/background.png');
+  background-image: url(https://www.dviation.com/sites/default/files/styles/banner/public/page-banner/about-us.jpg?itok=YIsFQ3nT);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: contain; */
 }
 
 .homeContainer {
@@ -16,7 +16,7 @@
   z-index: 2;
 }
 
-.hero {
+/* .hero {
   height: 0;
   height: 380px;
   margin: 0 auto;
@@ -25,9 +25,9 @@
   padding-top: 100px;
   text-align: center;
   width: 100%;
-}
+} */
 
-.hero h1 {
+/* .hero h1 {
   color: white;
   font-size: 4.5rem;
   font-weight: 700;
@@ -39,7 +39,7 @@
   color: white;
   font-size: 22px;
   font-weight: 400;
-}
+} */
 
 .leftPanel {
   background-image: url('../public/c837a6_eb322a4179e54d788eef6896e67f05d0_mv2.webp');

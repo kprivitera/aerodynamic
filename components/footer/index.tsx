@@ -24,9 +24,6 @@ const Footer = () => (
         <input type="text" placeholder="Email"/>
         <Clickable type="largeBordered" to="www.google.com">Subscribe</Clickable>
       </div>
-      <div className={styles.socials}>
-        <p>Follow us on:</p> <FontAwesomeIcon icon={faFacebookSquare} /> <FontAwesomeIcon icon={faInstagram} />
-      </div>
     </div>
     <div className={styles.bottomPanel}>
       <p>&copy; Copyright AERODYNAMIC PTY LTD</p>
