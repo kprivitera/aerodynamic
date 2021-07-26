@@ -19,13 +19,6 @@ const ImageCarousel = () => (
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src="ROYALTY FREE.003.jpg"
-      alt="Third slide"
-    />
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
       src="ROYALTY FREE.004.jpg"
       alt="Third slide"
     />
