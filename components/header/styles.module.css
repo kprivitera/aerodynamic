@@ -10,6 +10,7 @@
   transition: visibility 0s linear 0s, opacity 300ms;
   visibility: visible;
   width: 100%;
+  z-index: 1;
 }
 
 .navbarItems.hidden {

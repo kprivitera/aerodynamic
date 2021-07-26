@@ -1,9 +1,9 @@
-.pageWrapper {
-  /* background-image: url('../public/background.png');
+/* .pageWrapper {
+  background-image: url('../public/background.png');
   background-image: url(https://www.dviation.com/sites/default/files/styles/banner/public/page-banner/about-us.jpg?itok=YIsFQ3nT);
   background-repeat: no-repeat;
-  background-size: contain; */
-}
+  background-size: contain;
+} */
 
 .homeContainer {
   background-color: #141316;
@@ -60,10 +60,10 @@
 @media only screen and (min-width: 700px) {
   .homeContainer {
     flex-direction: row;
-    margin: -150px auto 0 auto;
+    margin: -50px auto 0 auto;
   }
 
   .servicesContainer {
-    margin-top: -100px;
+    margin-top: -50px;
   }
 }
