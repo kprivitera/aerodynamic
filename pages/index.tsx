@@ -5,6 +5,8 @@ import Fade from 'react-reveal/Fade';
 import Service from '../components/service';
 import styles from '../styles/home.module.css';
 
+import ImageCarousel from '../components/carousel';
+
 const HomePage = () => {
   useEffect(() => {
     fetch('/api/contact', {
@@ -18,10 +20,11 @@ const HomePage = () => {
         <meta name="description" content="This is the page description" />
       </Head>
       <div className={styles.pageWrapper}>
-        <div className={styles.hero}>
+        <ImageCarousel/>
+        {/* <div className={styles.hero}>
           <h1>AeroDynamic Systems</h1>
           <h3>Slogan text goes here</h3>
-        </div>
+        </div> */}
         <div className={styles.homeContainer}>
           <div className={styles.leftPanel}>
             <Fade duration={2000}>

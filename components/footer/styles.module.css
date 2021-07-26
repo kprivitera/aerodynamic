@@ -41,22 +41,6 @@
   padding: .5rem 1rem;
 }
 
-.socials {
-  align-items: center;
-  display: flex;
-  padding-top: 3rem;
-}
-
-.socials p {
-  margin: 0 .5rem 0 0;
-}
-
-.socials svg {
-  color: #fff;
-  font-size: 2rem;
-  margin: 0 .4rem;
-}
-
 .bottomPanel {
   border-top: solid 1px #505050;
   padding-top: 1.5em;
