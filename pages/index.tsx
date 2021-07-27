@@ -4,14 +4,17 @@ import Fade from 'react-reveal/Fade';
 
 import Service from '../components/service';
 import styles from '../styles/home.module.css';
-
+import { getClient, usePreviewSubscription } from "../utils/sanity";
 import ImageCarousel from '../components/carousel';
 
+const query = `//groq
+  *[_type == "page"]
+`;
+
 const HomePage = () => {
-  useEffect(() => {
-    fetch('/api/contact', {
-      method: 'post',
-    });
+  useEffect(async () => {
+    const productsData = await getClient(false).fetch(query);
+
   }, [])
   return (
     <>
