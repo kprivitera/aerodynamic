@@ -12,9 +12,9 @@ const query = `//groq
 `;
 
 const HomePage = () => {
-  useEffect(async () => {
-    const productsData = await getClient(false).fetch(query);
-
+  const getCmsData = async () => await getClient(false).fetch(query);
+  useEffect(() => {
+    getCmsData();
   }, [])
   return (
     <>
