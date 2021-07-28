@@ -8,12 +8,13 @@ export default {
       type: 'string',
       title: 'Title',
     },
-    // {
-    //   name: 'content',
-    //   type: 'array',
-    //   title: 'Page sections',
-    //   of: [{ type: 'hero' }, { type: 'imageSection' }, { type: 'textSection' }],
-    // },
+    {
+      name: 'content',
+      type: 'array',
+      title: 'Page sections',
+      of: [{ type: 'hero' }],
+      // of: [{ type: 'hero' }, { type: 'imageSection' }, { type: 'textSection' }],
+    },
     // {
     //   name: 'description',
     //   type: 'text',
