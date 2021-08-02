@@ -29,9 +29,7 @@ export default {
     },
     {
       title: 'Brand logo',
-      description:
-        'Best choice is to use an SVG where the color are set with currentColor',
-      name: 'logo',
+      name: 'imageObject',
       type: 'image',
       options: { hotspot: true },
       fields: [

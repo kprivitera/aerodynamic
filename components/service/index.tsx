@@ -1,14 +1,34 @@
 import Image from 'next/image'
 import Fade from 'react-reveal/Fade';
+import BlockContent from '@sanity/block-content-to-react';
 
 import styles from './styles.module.css';
 
-interface ServiceProps {
-  title: string,
-  description: string[]  
+interface PortableTextMarkDefs {
+  _key: string;
+  to: string;
 }
 
-const Service = ({title, description = []}:ServiceProps) => {
+interface PortableTextChildren {
+  text: string;
+  marks?: string[];
+}
+
+interface PortableText {
+  _type?: string;
+  _key: string;
+  text: string;
+  children: PortableTextChildren[];
+  markDefs: PortableTextMarkDefs[];
+}
+
+interface ServiceProps {
+  title: string,
+  description: PortableText[]  
+}
+
+const Service = ({title, description}:ServiceProps) => {
+  console.log({title, description})
   return (
     <Fade>
       <section className={styles.service}>
@@ -21,9 +41,7 @@ const Service = ({title, description = []}:ServiceProps) => {
         </div>
         <Fade cascade left>
         <div className={styles.body}>
-          {description.map((paragraph) => {
-            return <p>{paragraph}</p>
-          })}
+          <BlockContent blocks={description} />
         </div>
         </Fade>
       </section>

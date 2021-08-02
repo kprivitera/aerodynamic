@@ -1,21 +1,37 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
+import { map, head, isEmpty } from 'lodash/fp';
 
 import Service from '../components/service';
 import styles from '../styles/home.module.css';
-import { getClient, usePreviewSubscription } from "../utils/sanity";
+import { getClient } from "../utils/sanity";
 import ImageCarousel from '../components/carousel';
 
 const query = `//groq
-  *[_type == "page"]
+  *[_type == "home"]{
+    title,
+    description,
+    hero -> {
+      title,
+      slides[] {
+        title,
+        description,
+        imageObject
+      }
+    },
+    services[] -> {
+      title,
+      description
+    }
+  }
 `;
 
-const HomePage = () => {
-  const getCmsData = async () => await getClient(false).fetch(query);
-  useEffect(() => {
-    getCmsData();
-  }, [])
+const HomePage = ({ homeData }) => {
+  if (isEmpty(homeData)){
+    return null;
+  }
+  const { description, hero, services, title } = homeData;
+  console.log(services)
   return (
     <>
       <Head>
@@ -36,13 +52,18 @@ const HomePage = () => {
             </Fade>
           </div>
           <div className={styles.servicesContainer}>
-            <Service title="Maintenance, AOG and incident readout service" description={['Aircraft operators require aircrafts Flight Data and Cockpit Voice Recorders to be analysed annually.  Aerodynamics readout service provides customers with a secure, efficient and personalized service. We work closely with each customer to tailor a program that meets their requirements such as downloading of the Flight data or cockpit voice recorder, maintenance readouts (FDR, CVR and DLR), 24/7 AOG coverage and incident analysis solutions.  Aerodynamic readout service is compliant in accordance with the regulatory authorities mandates for Flight Data and Cockpit Voice recorders.']}/>
+            {
+              map(({ title, description }) => {
+                return <Service title={title} description={description} />
+              })(services)
+            }
+            {/* <Service title="Maintenance, AOG and incident readout service" description={['Aircraft operators require aircrafts Flight Data and Cockpit Voice Recorders to be analysed annually.  Aerodynamics readout service provides customers with a secure, efficient and personalized service. We work closely with each customer to tailor a program that meets their requirements such as downloading of the Flight data or cockpit voice recorder, maintenance readouts (FDR, CVR and DLR), 24/7 AOG coverage and incident analysis solutions.  Aerodynamic readout service is compliant in accordance with the regulatory authorities mandates for Flight Data and Cockpit Voice recorders.']}/>
             <Service title="Flight data monitoring" description={[
               'Flight Data Monitoring (FDM) programmes assist an operator to identify, quantify, assess and address operational risks. Safety Regulation Groups have helped develop and support such systems and used FDM information to support a range of airworthiness and operational safety tasks.', 
               'Aerodynamics provides a hosted FDM service which allows 24hr access to the software when required from anywhere. Remote access allows the user to perform the same tasks as an in-house system without the hassle of maintaining the appropriate licences and updates.',
               'We have an experienced team of Flight Data analysts on hand that maintain your system and perform the day to day FDM administration processes. This allows users to focus on their roles and increase productivity. Our team are available to provide support\training when required.']}/>
             <Service title="Avionics equipment repair and recertification" description={['Aerodynamic is a CASA &amp; EASA approved repair facility with the capability to repair and recertify airborne and ground support avionics equipment such as Flight Data and Cockpit voice recorders.']}/>
-            <Service title="Quality assurance" description={['Aerodynamic quality system is the core value of our company. With the importance of safety in the aviation industry our company works closely with the Airworthiness authorities to meet and exceed the regulations. Our staff are extensively trained and regularly audited by our quality assurance department to ensure the service we are providing our customers are second to none.']}/>
+            <Service title="Quality assurance" description={['Aerodynamic quality system is the core value of our company. With the importance of safety in the aviation industry our company works closely with the Airworthiness authorities to meet and exceed the regulations. Our staff are extensively trained and regularly audited by our quality assurance department to ensure the service we are providing our customers are second to none.']}/> */}
           </div>
         </div>
       </div>
@@ -51,3 +72,13 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+export const getStaticProps = async () => {
+  const result = await getClient(false).fetch(query);
+  const homeData = head(result);
+  return {
+    props: {
+      homeData    
+    },
+  }
+}

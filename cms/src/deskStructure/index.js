@@ -1,4 +1,6 @@
-import StructureBuilder from '@sanity/desk-tool/structure-builder';
+import StructureBuilder, {
+  document,
+} from '@sanity/desk-tool/structure-builder';
 import S from '@sanity/desk-tool/structure-builder';
 
 //  StructureBuilder.list()
@@ -11,11 +13,41 @@ import S from '@sanity/desk-tool/structure-builder';
 
 // Hide document types that we already have a structure definition for
 const hiddenDocTypes = (listItem) =>
-  !['imageObject'].includes(listItem.getId());
+  !['imageObject', 'siteConfig', 'page', 'home'].includes(listItem.getId());
 
 console.log('test', S.documentTypeListItems()[0].getId());
+
+const createHardcodedMenuItem = ({ title, subTitle, schemaType }) =>
+  S.listItem()
+    .title(title)
+    .child(
+      S.list()
+        .title(title)
+        .items([
+          S.listItem()
+            .title(subTitle)
+            .child(
+              S.document()
+                .title(subTitle)
+                .schemaType(schemaType)
+                .documentId(schemaType),
+            ),
+        ]),
+    );
 
 export default () =>
   StructureBuilder.list()
     .title('Content')
-    .items([...S.documentTypeListItems().filter(hiddenDocTypes)]);
+    .items([
+      createHardcodedMenuItem({
+        title: 'Website',
+        subTitle: 'Site configuration',
+        schemaType: 'siteConfig',
+      }),
+      createHardcodedMenuItem({
+        title: 'Home',
+        subTitle: 'Home configuration',
+        schemaType: 'home',
+      }),
+      ...S.documentTypeListItems().filter(hiddenDocTypes),
+    ]);
