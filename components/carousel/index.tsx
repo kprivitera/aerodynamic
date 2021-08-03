@@ -1,28 +1,32 @@
 import { Carousel } from 'react-bootstrap';
+import { map } from 'lodash/fp';
 
-const ImageCarousel = () => (
+
+interface ImageObj {
+  caption: string;
+  _type: string;
+  src: string;
+};
+
+interface Slide {
+  description?: string;
+  imageObject: ImageObj;
+  title?: string;
+};
+
+interface ImageCarouselProps {
+  slides: Slide[];
+};
+
+const ImageCarousel = ({ slides }:ImageCarouselProps ) => (
 <Carousel>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="/ROYALTY FREE.001.jpg"
-      alt="First slide"
-    />
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="ROYALTY FREE.002.jpg"
-      alt="Second slide"
-    />
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="ROYALTY FREE.004.jpg"
-      alt="Third slide"
-    />
-  </Carousel.Item>
+  {map(({ description, title, imageObject }) => {
+    return (
+      <Carousel.Item key={imageObject.src}>
+        <img className="d-block w-100" src={imageObject.src} />
+      </Carousel.Item>
+    )
+  })(slides)}
 </Carousel>
 
 );

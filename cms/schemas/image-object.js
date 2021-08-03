@@ -12,7 +12,6 @@ const imageObject = {
       type: 'string',
     },
   ],
-  // icon: MdImage,
   name: 'imageObject',
   type: 'document',
 };
