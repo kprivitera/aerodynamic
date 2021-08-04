@@ -28,7 +28,6 @@ interface ServiceProps {
 }
 
 const Service = ({title, description}:ServiceProps) => {
-  console.log({title, description})
   return (
     <Fade>
       <section className={styles.service}>

@@ -1,3 +1,5 @@
+import thingFields from './fields';
+
 export default {
   name: 'siteConfig',
   type: 'document',
@@ -28,21 +30,8 @@ export default {
       type: 'string',
     },
     {
+      ...thingFields.imageObject,
       title: 'Brand logo',
-      name: 'imageObject',
-      type: 'image',
-      options: { hotspot: true },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-          description: 'Important for SEO and accessiblity.',
-          options: {
-            isHighlighted: true,
-          },
-        },
-      ],
     },
     // {
     //   title: "Main navigation",

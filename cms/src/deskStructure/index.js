@@ -15,8 +15,6 @@ import S from '@sanity/desk-tool/structure-builder';
 const hiddenDocTypes = (listItem) =>
   !['imageObject', 'siteConfig', 'page', 'home'].includes(listItem.getId());
 
-console.log('test', S.documentTypeListItems()[0].getId());
-
 const createHardcodedMenuItem = ({ title, subTitle, schemaType }) =>
   S.listItem()
     .title(title)

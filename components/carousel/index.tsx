@@ -1,12 +1,6 @@
 import { Carousel } from 'react-bootstrap';
 import { map } from 'lodash/fp';
-
-
-interface ImageObj {
-  caption: string;
-  _type: string;
-  src: string;
-};
+import { ImageObj } from '../../interfaces';
 
 interface Slide {
   description?: string;
