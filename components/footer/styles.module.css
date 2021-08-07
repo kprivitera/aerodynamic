@@ -1,10 +1,15 @@
+.footer {
+  background-color: var(--black);
+  border-top: 2px solid var(--orange);
+}
+
 .footerWrapper {
-  background-color: #141316;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1300px;
   margin: 0 auto;
+  max-width: 1300px;
   padding: 2rem 1rem 1rem;
+  margin-top: 2rem;
 }
 
 .leftPanel {
@@ -25,26 +30,38 @@
   flex-basis: 60%;
 }
 
+.rightPanel h3 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.siteLinks {
+  list-style-type: none;
+  padding: 0;
+}
+
 .subscriptionForm label {
-  color: white;
+  color: var(--white);
   display: block;
   font-weight: 400;
   letter-spacing: 1px;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
-.subscriptionForm input[type="text"] {
+.subscriptionForm input[type='text'] {
   background: #141316;
   border: 2px solid #969696;
   border-radius: 5px;
-  margin-right: .7rem;
+  margin-right: 0.7rem;
   min-width: 350px;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .bottomPanel {
-  border-top: solid 1px #505050;
+  border-top: solid 1px var(--dark-grey);
   padding-top: 1.5em;
-  margin: 1.5rem 0 .5rem 0;
+  margin: 1.5rem 0 0.5rem 0;
   width: 100%;
 }
 

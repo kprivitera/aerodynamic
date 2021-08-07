@@ -14,7 +14,7 @@
 
 .typeWrapper {
   align-items: center;
-  color: #ff6700;
+  color: var(--orange);
   display: flex;
   margin-bottom: 16px;
 }
@@ -32,12 +32,12 @@
 }
 
 .icon {
-  fill: #8a8a8a;
+  fill: var(--light-grey);
   margin-right: 16px;
 }
 
 .body {
-  color: #8a8a8a;
+  color: var(--light-grey);
 }
 
 @media only screen and (min-width: 1280px) {

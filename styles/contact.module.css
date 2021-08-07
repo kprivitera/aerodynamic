@@ -8,13 +8,13 @@
 
 .pageContainer {
   padding: 1.5rem;
-  background-color: white;
+  background-color: var(--white);
   max-width: 970px;
   margin: 0 auto;
 }
 
 .pageContainer h1 {
-  color: #3f4349;
+  color: var(--dark-grey);
   font-size: 30px;
   margin-bottom: 1.5rem;
 }
@@ -32,4 +32,13 @@
 
 .form label {
   display: none;
+}
+
+.submit {
+  align-self: flex-start;
+  color: var(--white);
+  background-color: var(--orange);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }

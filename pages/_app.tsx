@@ -2,7 +2,9 @@ import { AppProps } from 'next/app';
 import { getClient } from "../utils/sanity";
 import { head } from 'lodash/fp';
 
+import '../styles/variables.css';
 import '../styles/global.css';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import Layout from '../components/layout'
 import { SanitySiteProps } from '../interfaces';

@@ -17,7 +17,7 @@ const HomePage = ({ homeData }) => {
   return (
     <>
       <Head>
-        <title>Homepage title</title>
+        <title>Aerodynamic</title>
         <meta name="description" content="This is the page description" />
       </Head>
       <div className={styles.pageWrapper}>

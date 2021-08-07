@@ -8,8 +8,8 @@ import styles from './styles.module.css';
 interface ClickableProps {
   children: React.ReactNode,
   className?: string,
-  type?: string,
   to: string,
+  type?: string,
 };
 
 const clickableVariants = {

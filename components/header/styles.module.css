@@ -1,6 +1,6 @@
 .navbarItems {
   align-items: center;
-  background-color: black;
+  background-color: var(--black);
   display: flex;
   height: 85px;
   justify-content: center;
@@ -20,7 +20,7 @@
 }
 
 .navbarLogo {
-  color: #fff;
+  color: var(--white);
   cursor: pointer;
   justify-self: start;
   margin-bottom: 0;
@@ -40,7 +40,7 @@
 }
 
 .navLinks {
-  color: white;
+  color: var(--white);
   padding: 0.5rem 1rem;
   text-decoration: none;
 }
@@ -50,7 +50,7 @@
 }
 
 .menuIcon {
-  color: #fff;
+  color: var(--white);
   display: none;
 }
 
@@ -79,7 +79,7 @@
   }
 
   .menuActive {
-    background: #000;
+    background: var(--black);
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;

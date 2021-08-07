@@ -1,21 +1,21 @@
 .link {
-  color: red;
+  color: var(--light-grey);
 }
 
 .largeBordered {
   border-radius: 5px;
-  border: 2px solid #ffffff;
-  color: #ffffff;
+  border: 2px solid var(--white);
+  color: var(--white);
   display: inline-block;
   letter-spacing: 1px;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
 }
 
 .largeBordered:hover,
 .largeBordered:focus {
-  background: #fe6700;
-  border-color: #fe6700;
-  color: #ffffff;
-  transition: background-color .25s ease-out,color .25s ease-out;
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
 }
