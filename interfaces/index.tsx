@@ -3,3 +3,7 @@ export interface ImageObj {
   _type: string;
   src: string;
 };
+
+export interface SanitySiteProps {
+  imageObject: ImageObj;
+};

@@ -1,34 +1,13 @@
-import { map, head, isEmpty } from 'lodash/fp';
 import { getClient } from "../utils/sanity";
+import { map, head, isEmpty } from 'lodash/fp';
 import BlockContent from '@sanity/block-content-to-react';
 import Fade from 'react-reveal/Fade';
 import Head from 'next/head';
 
+import { homeQuery } from '../queries';
+import ImageCarousel from '../components/carousel';
 import Service from '../components/service';
 import styles from '../styles/home.module.css';
-import ImageCarousel from '../components/carousel';
-
-const query = `//groq
-  *[_type == "home"]{
-    title,
-    description,
-    hero -> {
-      title,
-      slides[] {
-        title,
-        description,
-        imageObject {
-          caption,
-          "src": image.asset -> url
-        }
-      }
-    },
-    services[] -> {
-      title,
-      description
-    }
-  }
-`;
 
 const HomePage = ({ homeData }) => {
   if (isEmpty(homeData)){
@@ -70,7 +49,7 @@ const HomePage = ({ homeData }) => {
 export default HomePage;
 
 export const getServerSideProps = async () => {
-  const result = await getClient(false).fetch(query);
+  const result = await getClient(false).fetch(homeQuery);
   const homeData = head(result);
   return {
     props: {

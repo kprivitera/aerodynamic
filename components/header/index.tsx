@@ -1,19 +1,23 @@
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ImageObj } from '../../interfaces';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import Image from 'next/image';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Clickable from '../clickable';
-import constants from '../../constants';
 import styles from './styles.module.css';
+import { SanitySiteProps } from '../../interfaces';
 
-const { ROUTES } = constants;
+interface HeaderProps {
+  sanitySiteProps: SanitySiteProps;
+};
 
-const Header = () => {
+const Header = ({ sanitySiteProps}: HeaderProps) => {
   const [show, setShow] = useState(false);
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
+
+  const { caption, src } = sanitySiteProps.imageObject;
 
   const menuClickedHandler = () => {
     setHamburgerClicked(!hamburgerClicked);
@@ -35,7 +39,7 @@ const Header = () => {
 
   return (
     <nav className={classNames({[styles.hidden]: show }, styles.navbarItems)}>
-      <h1 className={styles.navbarLogo}><Image width="203" height="61" src="/logo.png" alt="logo" /></h1>
+      <h1 className={styles.navbarLogo}><Image alt={caption} height="61" src={src} width="203" /></h1>
       <div className={styles.menuIcon} onClick={menuClickedHandler}>
         <FontAwesomeIcon icon={menuIcon} />
       </div>
@@ -46,4 +50,5 @@ const Header = () => {
     </nav>
   );
 };
+
 export default Header;
