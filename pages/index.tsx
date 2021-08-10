@@ -22,10 +22,6 @@ const HomePage = ({ homeData }) => {
       </Head>
       <div className={styles.pageWrapper}>
         <ImageCarousel slides={slides}/>
-        {/* <div className={styles.hero}>
-          <h1>AeroDynamic Systems</h1>
-          <h3>Slogan text goes here</h3>
-        </div> */}
         <div className={styles.homeContainer}>
           <div className={styles.leftPanel}>
             <Fade duration={2000}>
