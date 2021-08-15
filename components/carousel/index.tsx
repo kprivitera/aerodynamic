@@ -15,15 +15,22 @@ interface ImageCarouselProps {
 };
 
 const ImageCarousel = ({ slides }:ImageCarouselProps ) => (
-  <Carousel>
-    {map(({ description, title, imageObject }) => {
-      return (
-        <Carousel.Item key={imageObject.src}>
-          <img className="d-block w-100" src={imageObject.src} />
-        </Carousel.Item>
-      )
-    })(slides)}
-  </Carousel>
+  <div className={styles.carouselWrapper}>
+    <Carousel>
+      {map(({ imageObject, subTitle, title  }) => {
+        return (
+          <Carousel.Item key={imageObject.src}>
+            <div className={styles.textWrapper}>
+              {title && <h2>{title}</h2>}
+              {subTitle && <h3>{subTitle}</h3>}
+            </div>
+            <div className={styles.imageWrapper}/>
+            <img className="d-block w-100" src={imageObject.src} />
+          </Carousel.Item>
+        )
+      })(slides)}
+    </Carousel>
+  </div>
 );
 
 export default ImageCarousel;

@@ -1,19 +1,16 @@
 .navWrapper {
-  background-color: var(--black);
+  background-color: transparent;
   height: 85px;
-  opacity: 1;
   position: fixed;
   top: 0;
-  transition: visibility 0s linear 0s, opacity 300ms;
-  visibility: visible;
+  transition: background-color 300ms linear;
   width: 100%;
   z-index: 3;
 }
 
 .navWrapper.hidden {
-  opacity: 0;
-  transition: visibility 0s linear 300ms, opacity 300ms;
-  visibility: hidden;
+  background-color: var(--black);
+  transition: background-color 300ms linear;
 }
 
 .navbarItems {
@@ -22,7 +19,7 @@
   height: 85px;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1432px;
+  max-width: var(--container-width);
   padding: 0 1rem;
   width: 100%;
 }

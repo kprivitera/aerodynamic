@@ -48,7 +48,7 @@ const Header = ({ sanitySiteProps}: HeaderProps) => {
           <ul className={classNames(styles.navMenu, {[styles.menuActive]: hamburgerClicked },)}>
             <li className={styles.listItem}><a className={styles.navLinks} href="/contact"/>Contact</li>
           </ul>
-          <h2 className={styles.tagLine}>Safety in the sky, starts from the ground </h2>
+          {/* <h2 className={styles.tagLine}>Safety in the sky, starts from the ground </h2> */}
           <Clickable className={styles.contactButton} to="/contact" type="largeBordered">Contact</Clickable>
         </div>  
     </nav>

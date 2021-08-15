@@ -31,6 +31,13 @@ const Contact = () => {
       <div className={styles.pageWrapper}>
         <div className={styles.pageContainer}>
           <h1>Contact support</h1>
+          <ul className={styles.contactDetails}>
+            <li><strong>AERODYNAMIC PTY LTD</strong></li>
+            <li>+61 3 8331 2900</li>
+            <li>31 McGregors Drive</li>
+            <li>Keilor Park VIC 3042 </li>
+            <li>AUSTRALIA</li>
+          </ul>
           <form onSubmit={handleSubmit} className={styles.form}>
             {formFields.map(({ type, name }) => {
               return (

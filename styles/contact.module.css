@@ -42,3 +42,14 @@
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
+
+.contactDetails {
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.contactDetails li {
+  color: var(--dark-grey);
+  list-style-type: none;
+  padding: 2px 0;
+}

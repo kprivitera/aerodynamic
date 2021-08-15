@@ -4,30 +4,17 @@
 }
 
 .footerWrapper {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 auto;
-  max-width: 1300px;
-  padding: 2rem 1rem 1rem;
-  margin-top: 2rem;
+  max-width: var(--container-width);
+  padding: 1rem;
 }
 
-.leftPanel {
-  flex-basis: 40%;
-}
-
-.contactDetails {
-  margin-top: 1rem;
-  padding: 0;
-}
-
-.contactDetails li {
-  list-style-type: none;
-  padding: 2px 0;
-}
-
-.rightPanel {
-  flex-basis: 60%;
+.leftPanel > div {
+  display: block !important;
 }
 
 .rightPanel h3 {
@@ -35,6 +22,11 @@
   font-weight: 400;
   letter-spacing: 1px;
   margin-bottom: 1rem;
+}
+
+.copyright {
+  margin: 0;
+  text-align: right;
 }
 
 .siteLinks {

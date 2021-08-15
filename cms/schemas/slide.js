@@ -1,7 +1,7 @@
 import thingFields from './fields';
 
 const slide = {
-  fields: [thingFields.title, thingFields.description, thingFields.imageObject],
+  fields: [thingFields.title, thingFields.subTitle, thingFields.imageObject],
   name: 'slide',
   preview: {
     select: {

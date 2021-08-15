@@ -6,7 +6,7 @@ export const homeQuery = `//groq
       title,
       slides[] {
         title,
-        description,
+        subTitle,
         imageObject {
           caption,
           "src": image.asset -> url
