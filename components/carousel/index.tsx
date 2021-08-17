@@ -16,7 +16,7 @@ interface ImageCarouselProps {
 
 const ImageCarousel = ({ slides }:ImageCarouselProps ) => (
   <div className={styles.carouselWrapper}>
-    <Carousel>
+    <Carousel indicators={false}>
       {map(({ imageObject, subTitle, title  }) => {
         return (
           <Carousel.Item key={imageObject.src}>

@@ -21,7 +21,7 @@
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 3px;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .textWrapper h3 {
@@ -36,4 +36,10 @@
   height: 100%;
   opacity: 0.5;
   background-color: var(--black);
+}
+
+@media screen and (max-width: 720px) {
+  .textWrapper {
+    padding-top: 9%;
+  }
 }
