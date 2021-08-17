@@ -10,10 +10,7 @@
 }
 
 .leftPanel {
-  /* background-image: url('../public/c837a6_eb322a4179e54d788eef6896e67f05d0_mv2.webp'); */
-  /* background-repeat: no-repeat; */
   border-radius: 10px;
-  /* box-shadow: inset 2px 3px 20px 12px rgb(20 19 22); */
   max-width: 450px;
   padding: 24px;
 }
