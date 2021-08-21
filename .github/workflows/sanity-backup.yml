@@ -10,13 +10,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: kyle test
+        run: cd cms && ls -l
+      - name: kyle test2
         run: ls -l
       - name: Export dataset
         uses: sanity-io/github-action-sanity@v0.1-alpha
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
         with:
-          args: cd cms && dataset export production backups/backup.tar.gz
+          args: dataset export production backups/backup.tar.gz
       - name: Upload backup.tar.gz
         uses: actions/upload-artifact@v2
         with:
